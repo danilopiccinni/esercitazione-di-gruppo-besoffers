@@ -2,11 +2,18 @@
 
 
 @section('content')
+
+
 <div class="container">
 
   <h1>Cantine</h1>
 
-    <table class="table table-dark table-striped">
+  <form action="{{route('guest.filter')}}" class="d-flex my-5 col-6 offset-3" role="search" method="GET">
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+  </form>
+
+    {{-- <table class="table table-dark table-striped">
         <thead>
           <tr>
             <th scope="col">Nome</th>
@@ -32,8 +39,29 @@
                 <td> {{ $cantina->email }} </td>
             </tr>         
             @endforeach
+
         </tbody>
-      </table>
+      </table> --}}
+
+
+      <div class="row gap-4">
+        @foreach($cantine as $cantina)
+        
+        <div class="card d-flex flex" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">{{$cantina->nome}}</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">{{ $cantina->indirizzo }}</h6>
+            <p class="card-text">{{ $cantina->comune }} </p>
+            <p class="card-text">{{ $cantina->provincia }} </p>
+            <p class="card-text">{{ $cantina->regione }} </p>
+            <p class="card-text">{{ $cantina->nazione }} </p>
+            <p class="card-text">{{ $cantina->telefono }} </p>
+            <p class="card-text">{{ $cantina->email }} </p>
+          </div>
+        </div>
+  @endforeach
+</div>
+
 
 </div>
 @endsection

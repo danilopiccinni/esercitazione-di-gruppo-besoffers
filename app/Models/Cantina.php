@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Cantina extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['nome', 'indirizzo', 'comune', 'provincia', 'regione', 'nazione','telefono','email'];
 }

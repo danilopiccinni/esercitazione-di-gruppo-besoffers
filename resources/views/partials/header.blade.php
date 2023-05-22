@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container my-5">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Besoffers</a>
@@ -8,19 +8,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="{{route('vini')}}">Vini</a>
+            <a class="nav-link" aria-current="page" href="{{route('guest.vini')}}">Vini</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('cantine')}}">Cantine</a>
+            <a class="nav-link" href="{{route('guest.cantine')}}">Cantine</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('vitigni')}}">Vitigni</a>
+            <a class="nav-link" href="{{route('guest.vitigni')}}">Vitigni</a>
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+
       </div>
     </div>
   </nav>
