@@ -22,7 +22,7 @@ class VinoSeeder extends Seeder
 
             $vino->nome = $faker->words(2, true);
             $vino->annata = $faker->year();
-            $vino->cantina = $faker->words(2, true);
+
             $vino->colore = $faker->randomElement(['rosso', 'rose', 'bianco']);
             $vino->tipologia = $faker->randomElement(['fermo', 'frizzante', 'passito']);
             $vino->gradazione = $faker->randomFloat(1, 0, 25) ;
