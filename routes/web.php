@@ -7,6 +7,8 @@ use App\Http\Controllers\VitignoController;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CantinaController as AdminCantinaController;
+use App\Http\Controllers\Admin\VinoController as AdminVinoController;
+use App\Http\Controllers\Admin\VitignoController as AdminVitignoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,7 +40,8 @@ Route::middleware([])->prefix('guest')->name('guest.')->group(function(){
 Route::middleware(['auth','verified'] )->name('admin.')->prefix('admin')->group(function() {
 
     Route::resource('cantina',AdminCantinaController::class);
-
+    Route::resource('vino',AdminVinoController::class);
+    Route::resource('vitignos',AdminVitignoController::class);
 });
 
 Route::get('/dashboard', function () {
